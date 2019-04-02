@@ -1,2 +1,36 @@
 //Oleh :
-    //Andhika Kurniawan - 1817051027
+  //Andhika Kurniawan - 1817051027
+  //Ario Rinaldi - 1817051040
+  //Kurnia Agung Firdaus - 1817051056
+  //Muhammad Alamsyah - 1817051051
+  
+#include <iostream>
+#include <cstdlib>
+#include <conio.h>
+using namespace std;
+
+struct TNode{
+    int data;
+    TNode *next;
+};
+
+class Node{
+	public:
+    	int data;
+		Node* next;
+		Node* posisi;
+};
+
+TNode *head, *tail;
+
+void headtail(){
+    head=NULL;
+    tail=NULL;
+}
+
+int isEmpty(){
+	if(tail==NULL) 
+		return 1;
+	else 
+		return 0;
+}
