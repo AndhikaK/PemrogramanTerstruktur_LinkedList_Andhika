@@ -128,3 +128,16 @@ void sisipan(int databaru,int posisi){
   	}
  	cout<<"Data masuk"<<endl;
 }
+
+void tampil(){
+   TNode *bantu;
+   bantu=head;
+   if(isEmpty()==0){
+      while(bantu!=NULL){
+         cout<<bantu->data<<" ";
+   	 bantu=bantu->next;
+	}
+   } 
+   else 
+	cout<<"Masih kosong\n";
+}
