@@ -141,3 +141,15 @@ void tampil(){
    else 
 	cout<<"Masih kosong\n";
 }
+
+void clear(){
+    TNode *bantu,*hapus;
+    bantu = head;
+    while(bantu!=NULL){
+        hapus = bantu;
+        bantu = bantu->next;
+        delete hapus;
+    }
+    head = NULL;
+    cout<<"CLEAR";
+}
