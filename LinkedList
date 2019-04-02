@@ -42,7 +42,7 @@ void insertDepan(int databaru){
  	baru->next=NULL;
 	if(isEmpty()==1){
   		head=tail=baru;
- 	       tail->next=NULL;
+        tail->next=NULL;
  	} else {
         baru->next=head;
         head=baru;
@@ -152,4 +152,72 @@ void clear(){
     }
     head = NULL;
     cout<<"CLEAR";
+}
+
+int main () {
+     int pilih,databaru,posisi;
+     
+    do {
+        system("cls");
+        cout<<"Program linked list";
+        cout<<endl<<endl;
+        cout<<"Pilihan : "<<endl;
+		cout<<"1. Tambah Node Depan"<<endl;
+		cout<<"2. Tambah Node Belakang"<<endl;
+		cout<<"3. Hapus Node Depan"<<endl;
+		cout<<"4. Hapus Node Belakang"<<endl;
+		cout<<"5. Sisipkan"<<endl;
+		cout<<"6. Lihat"<<endl;
+		cout<<"7. Clear"<<endl;
+		cout<<"8. Keluar"<<endl;
+		cout<<"Masukan Pilihan : "; cin>>pilih;
+		switch(pilih){
+			case 1:{
+				cout<<"Masukan Data : "; cin>>databaru;
+				insertDepan(databaru);
+				cout<<endl;
+				break;
+				}				
+			case 2:{
+				cout<<"Masukan Data : "; cin>>databaru;
+            			insertBelakang(databaru);
+            			cout<<endl;
+				break;
+			}
+			case 3:{
+				hapusDepan();
+		            	cout<<endl;
+				break;
+			}	
+          	case 4:{
+         			hapusBelakang();
+				break;
+			}			
+			case 5:{
+				cout<<"Masukan Data : "; cin>>databaru;
+            			cout<<"Masukan Posisi yang ingin ditambahkan: "; cin>>posisi;
+            			sisipan(databaru, posisi);
+            			cout<<endl;
+				break;
+			}
+            case 6:{
+            	tampil();
+				break;
+			}			
+			case 7:{
+				clear();
+				break;
+			}
+		    case 8:{
+            	exit(1);
+				break;
+			}
+			default:{
+            			cout<<"Wrong choice"<<endl;
+			}
+		}
+		getch();
+	}	
+	while(pilih!=9);
+    return 0;
 }
